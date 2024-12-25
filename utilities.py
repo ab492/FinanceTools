@@ -6,4 +6,6 @@ def calculate_standard_deviation(data):
     """
     if len(data) == 1:
         return 0
-    raise NotImplementedError("This function currently handles only single-value lists.")
+    if all(x == data[0] for x in data):
+        return 0
+    raise NotImplementedError("This function currently handles only single-value or identical-value lists.")
