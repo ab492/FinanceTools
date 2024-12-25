@@ -20,8 +20,12 @@ class TestMean(unittest.TestCase):
     def test_mixed_positive_and_negative(self):
         self.assertEqual(calculate_mean([-10, 10]), 0)
 
-    def test_large_numbers(self): # Ensure there are no overflow issues
+    def test_large_numbers(self):
         self.assertEqual(calculate_mean([1_000_000, 2_000_000, 3_000_000]), 2_000_000)
     
     def test_single_floating_point_value(self):
         self.assertEqual(calculate_mean([5.5]), 5.5)
+
+    def test_empty_list(self):
+        with self.assertRaises(ValueError):
+            calculate_mean([])
