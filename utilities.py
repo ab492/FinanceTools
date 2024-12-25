@@ -11,5 +11,4 @@ def calculate_standard_deviation(data):
     raise NotImplementedError("This function currently handles only single-value or identical-value lists.")
 
 def calculate_mean(data):
-    if len(data) == 1:
-        return data[0]
+    return sum(data) / len(data)
