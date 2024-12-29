@@ -10,4 +10,10 @@ class TestLoanToValue(unittest.TestCase):
         loan_to_value = calculate_loan_to_value(loan_amount=100000, property_value=100000)
         self.assertEqual(loan_to_value, 100)
 
+    def test_zero_loan(self):
+        loan_to_value = calculate_loan_to_value(loan_amount=0, property_value=100000)
+        self.assertEqual(loan_to_value, 0)
 
+    # def loan_greater_than_property_value(self):
+    #     loan_to_value = calculate_loan_to_value(loan_amount=150000, property_value=100000)
+    #     self.assertEqual(loan_to_value, 150)
