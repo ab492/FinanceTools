@@ -21,3 +21,12 @@ class TestLoanToValue(unittest.TestCase):
     def test_negative_property_value(self):
         with self.assertRaises(ValueError):
             calculate_loan_to_value(loan_amount=150000, property_value=-100000)
+
+    def test_zero_property_value(self):
+        with self.assertRaises(ValueError):
+            calculate_loan_to_value(loan_amount=150000, property_value=0)
+
+
+    def test_negative_loan(self):
+        with self.assertRaises(ValueError):
+            calculate_loan_to_value(loan_amount=-50000, property_value=100000)

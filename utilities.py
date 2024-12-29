@@ -28,4 +28,8 @@ def calculate_mean(data):
 def calculate_loan_to_value(loan_amount, property_value):
     if property_value <= 0:
         raise ValueError("Property value must be greater than zero")
+
+    if loan_amount < 0:
+        raise ValueError("Property value must be greater than zero")
+
     return (loan_amount / property_value) * 100
