@@ -24,3 +24,6 @@ def calculate_mean(data):
         raise ValueError("The data list cannot be empty")
     else:
         return sum(data) / len(data)
+
+def calculate_loan_to_value(loan_amount, property_value):
+    return (loan_amount / property_value) * 100
