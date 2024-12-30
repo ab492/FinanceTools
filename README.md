@@ -5,8 +5,7 @@ A work in progress (and currently very light) place for adding Python implementa
 
 
 ## TODO
-- Look into best way to manage Python environment and packages.
-- Integrate with [existing Jupyter notebooks](maths_notes/).
-- learn about variance.
+- Look into best way to manage Python environment with specific packages (i.e. Jupyter).
+- Learn about variance.
 - Learn about overflow issue with large numbers.
 - Learn about precision in Python.
