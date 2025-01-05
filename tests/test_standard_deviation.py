@@ -1,5 +1,5 @@
 import unittest
-from src.utilities import calculate_standard_deviation
+from utilities import calculate_standard_deviation
 
 class TestStandardDeviation(unittest.TestCase):
     def test_integer_standard_deviation(self):

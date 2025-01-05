@@ -1,5 +1,5 @@
 import unittest
-from src.utilities import calculate_loan_to_value
+from utilities import calculate_loan_to_value
 
 class TestLoanToValue(unittest.TestCase):
     def test_loan_to_value_basic(self):
