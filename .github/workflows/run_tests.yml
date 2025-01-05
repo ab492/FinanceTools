@@ -23,7 +23,12 @@ jobs:
         run: python --version
 
       - name: Setup permissions
-        run: chmod +x ./run_tests.sh
+        run: | # Pipe signifies multiple commands
+          chmod +x ./run_tests.sh
+          chmod +x scripts/setup.sh
+
+      - name: Setup Python package locally
+        run: scripts/setup.sh
 
       - name: Run tests
         run: ./run_tests.sh
