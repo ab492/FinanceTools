@@ -14,6 +14,10 @@ source venv/bin/activate
 
 This lets us define top-level dependencies in requirements.in, and compile them into a fully pinned requirements.txt.
 
+```bash
+pip install pip-tools
+```
+
 3. Install project dependencies from the compiled requirements.txt:
 
 ```bash

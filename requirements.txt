@@ -66,7 +66,9 @@ idna==3.10
     #   jsonschema
     #   requests
 ipykernel==6.29.5
-    # via jupyterlab
+    # via
+    #   -r requirements.in
+    #   jupyterlab
 ipython==9.1.0
     # via ipykernel
 ipython-pygments-lexers==1.1.1
