@@ -5,12 +5,18 @@ A work in progress (and currently very light) place for adding Python implementa
 
 ## How to Setup
 
-1. Activate the virtual environment:
+1. Setup a virtual environemnt:
+
+```bash
+python3 -m venv venv
+```
+
+2. Activate the virtual environment:
 ```bash
 source venv/bin/activate
 ```
 
-2. Install pip-tools. Instead of manually managing a messy requirements.txt full of sub-dependencies, we use [pip tools](https://github.com/jazzband/pip-tools).
+3. Install pip-tools. Instead of manually managing a messy requirements.txt full of sub-dependencies, we use [pip tools](https://github.com/jazzband/pip-tools).
 
 This lets us define top-level dependencies in requirements.in, and compile them into a fully pinned requirements.txt.
 
@@ -18,12 +24,17 @@ This lets us define top-level dependencies in requirements.in, and compile them 
 pip install pip-tools
 ```
 
-3. Install project dependencies from the compiled requirements.txt:
+4. Install project dependencies from the compiled requirements.txt:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+5. Set your venv Python kernal so that Jupyter can use it:
+
+```bash
+python -m ipykernel install --user --name=venv --display-name "Python (venv)"
+```
 
 ## How to Update Dependencies
 
@@ -45,7 +56,7 @@ pip-compile requirements.in
 pip install -r requirements.txt
 ```
 
-## (Maybe Legacy) How to install package locally (for use in Jupyter Notebooks)
+## (TBD Legacy) How to install package locally (for use in Jupyter Notebooks)
 1. Run `scripts/setup.sh` from the main directory.
 
 ## TODO
