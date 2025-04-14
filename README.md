@@ -39,6 +39,11 @@ echo "jupyterlab" > requirements.in
 pip-compile requirements.in
 ```
 
+3. Install packages from requirements.txt:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## (Maybe Legacy) How to install package locally (for use in Jupyter Notebooks)
 1. Run `scripts/setup.sh` from the main directory.
