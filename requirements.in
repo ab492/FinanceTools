@@ -1,2 +1,5 @@
 jupyterlab
 ipykernel
+numpy
+matplotlib
+seaborn
